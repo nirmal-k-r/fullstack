@@ -1,0 +1,72 @@
+body{
+    background-color: rgb(213, 216, 232);
+}
+
+nav{
+    background-color: rgb(28, 27, 35);
+    color:aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+nav a{
+    color:aliceblue;
+    font-size: 17px;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-family: Actor;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: Alatsi;
+}
+
+.pageContent{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+p{
+    color:rgb(52, 53, 60)
+}
+
+
+.myimage{
+    width: 400px;
+    border-radius: 25px;    
+    box-shadow: 10px 10px 5px 5px rgb(59, 61, 61);   
+}
+
+.imageblock{
+    width: 400px;
+    float: right;
+    margin-left: 50px;
+}
+
+.mytext{
+    float:left;
+}
+
+footer{
+    text-align: center;
+    font-family: Actor;
+    font-size: larger;
+}
+
+
+table, tr, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td, th{
+    padding: 3px;
+}
+
+th{
+    background-color: rgb(67, 65, 182);
+    color: white;
+}

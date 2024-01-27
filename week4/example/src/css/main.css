@@ -1,0 +1,58 @@
+body{
+    background-color: rgb(205, 230, 251);
+}
+
+.main{
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.container-cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.card{
+    background-color: rgb(215, 218, 255);
+    border: 1px dotted black;
+    box-shadow: 5px 5px 5px 5px rgb(59, 61, 61);   
+    width: 250px;
+    height: 350px;
+}
+
+
+.inner-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+.image-container{
+    max-height: 150px;
+    max-width: 250px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 45px;
+    /* width: 100%; */
+}
+
+.description{
+    max-width: 210px;
+    /* padding: 20px; */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.image{
+    width: 100%;
+}
+
+.text{
+    padding-top: 20px;
+    color:darkgreen;
+    text-align: center;
+    font-size: 25px;
+}

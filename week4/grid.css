@@ -1,0 +1,51 @@
+body{
+    background-color: azure;
+}
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3,400px);
+    grid-template-rows: auto auto auto auto auto ;
+    height:800px;
+    row-gap: 10px;
+    column-gap: 10px;
+    justify-content:center;
+
+}
+.grid-item{
+    background-color: aqua;
+}
+
+.item1{
+    grid-column: 1 / 4;
+    background-color: brown;
+}
+
+.item2{
+    grid-column: 1 / 2;
+    background-color: blueviolet;
+    width: 100$;
+}
+
+.item3{
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    background-color: blue;
+}
+.item4{
+    grid-column: 1 / 2;
+    grid-row: 3 / 6;
+    background-color: rgb(53, 213, 115);
+}
+
+.item5{
+    grid-column: 2 / 4;
+    grid-row: 4 / 6;
+    background-color: rgb(219, 255, 58);
+}
+
+.myImage{
+    width: 100%;
+    border-radius: 20px;
+}

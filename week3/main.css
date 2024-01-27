@@ -1,0 +1,35 @@
+h1{
+  color:red;
+  text-decoration: underline;  
+}
+
+p{
+    font-size: 25px;
+    font-family: Alata;
+    color: blue;
+}
+
+img{
+    border-radius: 25px;
+    width: 500px;
+}
+
+body{
+    background-color: gray;
+}
+
+.myTitle{
+    color:purple;
+}
+
+.underlinedText{
+    text-decoration: underline;
+}
+
+#custom{
+    color:green;
+}
+
+div h1{
+    color:cadetblue;
+}
