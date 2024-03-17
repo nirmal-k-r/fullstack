@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .box a{
+            color: white;
+            text-decoration: none;
+        }
+        
+    </style>
+    <body>
+        <h1 id="header">Test</h1>
+        <p id="content"></p>
+
+        <form id="loginForm">
+            <label>Username</label>
+            <input type="text" id="username">
+            <label>Password</label>
+            <input type="password" id="password">
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <label>Search</label> 
+        <input type="text" id="search" onkeyup="search()">
+        <div>
+            <ul id="searchResults">
+               
+            </ul>
+
+        </div>
+
+        <div id='container'>
+            <button onclick="loadBox(event)">Load box</button>
+        </div>
+        
+      
+        
+    </body>
+
+    <script>
+        var header=document.getElementById("header");
+        console.log(header.innerHTML);
+        // alert(header.innerHTML);
+        header.innerHTML="DOM";
+
+        var content=document.querySelector("#content");
+        content.innerHTML="This is a test";
+
+        //select the form
+        var form=document.getElementById("loginForm");
+        //bind event listener
+
+        form.addEventListener('submit',display);
+
+        function display(event){
+            event.preventDefault();
+            var username_field=document.getElementById("username");
+            var username=username_field.value;
+            var password=document.getElementById("password").value;
+            if (password.length>4 && username.length>4){
+
+                
+                console.log(username+"    "+password);
+
+                if (username=="admin" && password=="admin"){
+                    window.location.href='https://www.google.com';
+                }
+            }else{
+                alert('Invalid details entered');
+            }
+        }
+
+        items=['Apple',"Orange","Pear",'Coconut'];
+
+        function search(){
+            var keyword=document.getElementById("search").value;
+            var ul=document.getElementById("searchResults");
+            ul.innerHTML="";
+            for (item of items){
+                if (item.toLowerCase().includes(keyword.toLowerCase())){
+                    // console.log(item);
+                    var li=document.createElement("li");
+                    li.innerHTML=item;
+                    ul.appendChild(li);
+                }
+            }
+            var result=items.filter(function(item){
+                return item.toLowerCase().includes(keyword.toLowerCase());
+            });
+
+            
+        }
+
+        function loadBox(event){
+            event.preventDefault();
+            var container=document.getElementById("container");
+
+            var box=document.createElement("div");
+            box.classList.add("box");
+            
+            var a=document.createElement("a");
+            a.innerHTML='Click me';
+            a.href='https://www.google.com';
+
+            box.appendChild(a);
+            container.appendChild(box);
+
+
+            
+        }
+
+
+    </script>
+</html>

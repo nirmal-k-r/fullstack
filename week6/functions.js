@@ -30,3 +30,5 @@ function new_average(mark1,mark2){
 
 let result=new_average(30,60);
 console.log('average is '+result);
+
+

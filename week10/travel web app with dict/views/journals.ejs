@@ -1,0 +1,45 @@
+<%- include('partials/header') %>
+<section>
+    <br><br>
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-primary text-center" role="alert">
+                       <%- message %>
+                    </div>
+                    <br>
+                    <div class="text-center">
+                        <a class="btn btn-primary" href="/add">Add Journal</a>
+                    </div>
+                  
+                    <br>
+
+                    <!-- <h1>Travel Journals</h1> -->
+                    <br>
+                        <% for (key in journals){ %>
+                            <div class="card">
+                                <div class="card-header">
+                                    Journal Item
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><%- journals[key]['title'] %></h5>
+                                    <p class="card-text"><%- journals[key]['description'] %></p>
+                                    <a href="/journals/<%- key %>" class="btn btn-primary">View</a>
+                                </div>
+                            </div>
+                            <br>
+                        <% } %>
+                        <br>
+                        <br>
+                        <br>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<%- include('partials/footer') %>

@@ -22,6 +22,7 @@ let names=['john','paul','jane','doe'];
 for (let name of names){
     console.log(name);
 };
+
 console.log('-------------------------');
 
 //case study

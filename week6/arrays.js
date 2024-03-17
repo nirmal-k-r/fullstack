@@ -35,6 +35,5 @@ console.log(names);
 names.pop();
 console.log(names);
 
-
 person=['john',30,true];
 console.log(person);

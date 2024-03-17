@@ -1,0 +1,37 @@
+<%- include('partials/header') %>
+<section>
+    <br><br>
+    <div class="container">
+        <div class="container">
+            <div class="alert alert-primary text-center" role="alert">
+                <%- message %>
+             </div>
+             <br>
+            <div class="row">
+                <form action="/journals/<%- journal['_id'] %>/update" method="POST">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Journal Name</span>
+                        <input type="text" class="form-control"  name="title" placeholder="Name" aria-label="Name" aria-describedby="basic-addon1" id="title" value="<%- journal['title'] %>">
+                    </div>
+                    
+                    <div class="input-group">
+                        <span class="input-group-text">Journal Description</span>
+                        <textarea class="form-control" aria-label="With textarea" name="description" id="description"><%- journal['description'] %></textarea>
+                    </div>
+                    
+                    <br>
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic-addon3">Url</span>
+                            <input type="text" class="form-control" name="image" aria-describedby="basic-addon3 basic-addon4" id="image" value="<%- journal['image'] %>">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </form>
+           </div> 
+        </div>
+    </div>
+</section>
+
+
+<%- include('partials/footer') %>
